@@ -26,9 +26,20 @@
 
     <!-- 地址解析器  -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/view/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
+
+    <!-- 静态资源过滤 -->
+    <mvc:resources location="/" mapping="/**/*.js" />
+    <mvc:resources location="/" mapping="/**/*.html" />
+    <mvc:resources location="/" mapping="/**/*.css" />
+
+    <mvc:interceptors>
+    <mvc:interceptor>
+        <mvc:mapping path="/**"/>
+        <bean class="com.xiaoqiang.util.CrossDomainInterceptor"></bean>
+    </mvc:interceptor>
+    </mvc:interceptors>
 
 
 </beans>

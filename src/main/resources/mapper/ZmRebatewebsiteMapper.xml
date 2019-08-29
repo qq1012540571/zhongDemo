@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xiaoqiang.dao.ZmRebatewebsiteMapper" >
+
+    <resultMap id="BaseResultMap" type="com.xiaoqiang.entiy.ZmRebatewebsite" >
+        <id column="ID" property="id" jdbcType="DECIMAL" />
+        <result column="NAME" property="name" jdbcType="VARCHAR" />
+        <result column="URL" property="url" jdbcType="VARCHAR" />
+        <result column="LOGOURL" property="logourl" jdbcType="VARCHAR" />
+        <result column="REBATE" property="rebate" jdbcType="VARCHAR" />
+        <result column="INTRODUCTION" property="introduction" jdbcType="VARCHAR" />
+        <result column="OVERVIEW" property="overview" jdbcType="VARCHAR" />
+        <result column="ISON" property="ison" jdbcType="DECIMAL" />
+        <result column="ISINDEX" property="isindex" jdbcType="DECIMAL" />
+        <result column="FIRSTWORD" property="firstword" jdbcType="CHAR" />
+        <result column="BGIMG" property="bgimg" jdbcType="VARCHAR" />
+        <result column="SORT" property="sort" jdbcType="DECIMAL" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        ID, NAME, URL, LOGOURL, REBATE, INTRODUCTION, OVERVIEW, ISON, ISINDEX, FIRSTWORD, 
+        BGIMG, SORT
+    </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select 
+        <include refid="Base_Column_List" />
+        from ZM_REBATEWEBSITE
+        where ID = #{id,jdbcType=DECIMAL}
+    </select>
+
+    <select id="selectAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from ZM_REBATEWEBSITE
+
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from ZM_REBATEWEBSITE
+        where ID = #{id,jdbcType=DECIMAL}
+    </delete>
+
+    <insert id="insert" parameterType="com.xiaoqiang.entiy.ZmRebatewebsite" >
+        insert into ZM_REBATEWEBSITE (ID, NAME, URL, 
+            LOGOURL, REBATE, INTRODUCTION, 
+            OVERVIEW, ISON, ISINDEX, 
+            FIRSTWORD, BGIMG, SORT
+            )
+        values (#{id,jdbcType=DECIMAL}, #{name,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, 
+            #{logourl,jdbcType=VARCHAR}, #{rebate,jdbcType=VARCHAR}, #{introduction,jdbcType=VARCHAR}, 
+            #{overview,jdbcType=VARCHAR}, #{ison,jdbcType=DECIMAL}, #{isindex,jdbcType=DECIMAL}, 
+            #{firstword,jdbcType=CHAR}, #{bgimg,jdbcType=VARCHAR}, #{sort,jdbcType=DECIMAL}
+            )
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.xiaoqiang.entiy.ZmRebatewebsite" >
+        insert into ZM_REBATEWEBSITE
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                ID,
+            </if>
+            <if test="name != null" >
+                NAME,
+            </if>
+            <if test="url != null" >
+                URL,
+            </if>
+            <if test="logourl != null" >
+                LOGOURL,
+            </if>
+            <if test="rebate != null" >
+                REBATE,
+            </if>
+            <if test="introduction != null" >
+                INTRODUCTION,
+            </if>
+            <if test="overview != null" >
+                OVERVIEW,
+            </if>
+            <if test="ison != null" >
+                ISON,
+            </if>
+            <if test="isindex != null" >
+                ISINDEX,
+            </if>
+            <if test="firstword != null" >
+                FIRSTWORD,
+            </if>
+            <if test="bgimg != null" >
+                BGIMG,
+            </if>
+            <if test="sort != null" >
+                SORT,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=DECIMAL},
+            </if>
+            <if test="name != null" >
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="url != null" >
+                #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="logourl != null" >
+                #{logourl,jdbcType=VARCHAR},
+            </if>
+            <if test="rebate != null" >
+                #{rebate,jdbcType=VARCHAR},
+            </if>
+            <if test="introduction != null" >
+                #{introduction,jdbcType=VARCHAR},
+            </if>
+            <if test="overview != null" >
+                #{overview,jdbcType=VARCHAR},
+            </if>
+            <if test="ison != null" >
+                #{ison,jdbcType=DECIMAL},
+            </if>
+            <if test="isindex != null" >
+                #{isindex,jdbcType=DECIMAL},
+            </if>
+            <if test="firstword != null" >
+                #{firstword,jdbcType=CHAR},
+            </if>
+            <if test="bgimg != null" >
+                #{bgimg,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null" >
+                #{sort,jdbcType=DECIMAL},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.xiaoqiang.entiy.ZmRebatewebsite" >
+        update ZM_REBATEWEBSITE
+        <set >
+            <if test="name != null" >
+                NAME = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="url != null" >
+                URL = #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="logourl != null" >
+                LOGOURL = #{logourl,jdbcType=VARCHAR},
+            </if>
+            <if test="rebate != null" >
+                REBATE = #{rebate,jdbcType=VARCHAR},
+            </if>
+            <if test="introduction != null" >
+                INTRODUCTION = #{introduction,jdbcType=VARCHAR},
+            </if>
+            <if test="overview != null" >
+                OVERVIEW = #{overview,jdbcType=VARCHAR},
+            </if>
+            <if test="ison != null" >
+                ISON = #{ison,jdbcType=DECIMAL},
+            </if>
+            <if test="isindex != null" >
+                ISINDEX = #{isindex,jdbcType=DECIMAL},
+            </if>
+            <if test="firstword != null" >
+                FIRSTWORD = #{firstword,jdbcType=CHAR},
+            </if>
+            <if test="bgimg != null" >
+                BGIMG = #{bgimg,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null" >
+                SORT = #{sort,jdbcType=DECIMAL},
+            </if>
+        </set>
+        where ID = #{id,jdbcType=DECIMAL}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.xiaoqiang.entiy.ZmRebatewebsite" >
+        update ZM_REBATEWEBSITE
+        set NAME = #{name,jdbcType=VARCHAR},
+            URL = #{url,jdbcType=VARCHAR},
+            LOGOURL = #{logourl,jdbcType=VARCHAR},
+            REBATE = #{rebate,jdbcType=VARCHAR},
+            INTRODUCTION = #{introduction,jdbcType=VARCHAR},
+            OVERVIEW = #{overview,jdbcType=VARCHAR},
+            ISON = #{ison,jdbcType=DECIMAL},
+            ISINDEX = #{isindex,jdbcType=DECIMAL},
+            FIRSTWORD = #{firstword,jdbcType=CHAR},
+            BGIMG = #{bgimg,jdbcType=VARCHAR},
+            SORT = #{sort,jdbcType=DECIMAL}
+        where ID = #{id,jdbcType=DECIMAL}
+    </update>
+</mapper>

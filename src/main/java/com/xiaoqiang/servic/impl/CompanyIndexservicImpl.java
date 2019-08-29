@@ -167,7 +167,7 @@ public class CompanyIndexservicImpl implements CompanyIndexservic {
     public void search(String name) {
         SearchRequest searchRequest = new SearchRequest(INDEX_NAME);
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
-        searchSourceBuilder.query(QueryBuilders.matchQuery(CompanyKey.companyName, name));
+        searchSourceBuilder.query(QueryBuilders.matchPhraseQuery(CompanyKey.companyName, name));
         searchRequest.source(searchSourceBuilder);
         SearchResponse searchResponse = null;
         try {

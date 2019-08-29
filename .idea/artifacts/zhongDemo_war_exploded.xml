@@ -15,6 +15,8 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.12" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-pool2:2.4.2" />
           <element id="library" level="project" name="Maven: com.oracle:ojdbc:6" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.25" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.3.0" />
@@ -89,7 +91,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="zhongDemo/web/webapp" />
+      <element id="javaee-facet-resources" facet="zhongDemo/web/Web" />
     </root>
   </artifact>
 </component>

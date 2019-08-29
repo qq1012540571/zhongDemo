@@ -24,15 +24,13 @@ public class CreateIndexDemo {
         try (RestHighLevelClient client = InitDemo.getClient();) {
 
             // 1、创建 创建索引request 参数：索引名mess
-            CreateIndexRequest request = new CreateIndexRequest("mess");
+            CreateIndexRequest request = new CreateIndexRequest("mycompany");
 
             // 2、设置索引的settings
-            request.settings(Settings.builder().put("index.number_of_shards", 3) // 分片数
-                    .put("index.number_of_replicas", 2) // 副本数
-                    .put("analysis.analyzer.default.tokenizer", "ik_smart") // 默认分词器
+            request.settings(Settings.builder().put("index.number_of_shards", 5) // 分片数
+                    .put("index.number_of_replicas", 3) // 副本数
+                  // 默认分词器
             );
-
-            // 3、设置索引的mappings
             request.mapping("_doc",
                     "  {\n" +
                     "    \"_doc\": {\n" +

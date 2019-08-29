@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xiaoqiang.dao.ZmTbkitemMapper" >
+
+    <resultMap id="BaseResultMap" type="com.xiaoqiang.entiy.ZmTbkitem" >
+        <id column="ID" property="id" jdbcType="DECIMAL" />
+        <result column="NUM_IID" property="numIid" jdbcType="VARCHAR" />
+        <result column="TITLE" property="title" jdbcType="OTHER" />
+        <result column="PICT_URL" property="pictUrl" jdbcType="VARCHAR" />
+        <result column="RESERVE_PRICE" property="reservePrice" jdbcType="DECIMAL" />
+        <result column="ZK_FINAL_PRICE" property="zkFinalPrice" jdbcType="DECIMAL" />
+        <result column="USER_TYPE" property="userType" jdbcType="DECIMAL" />
+        <result column="PROVCITY" property="provcity" jdbcType="OTHER" />
+        <result column="ITEM_URL" property="itemUrl" jdbcType="VARCHAR" />
+        <result column="TG_URL_PC" property="tgUrlPc" jdbcType="VARCHAR" />
+        <result column="TG_URL_WAP" property="tgUrlWap" jdbcType="VARCHAR" />
+        <result column="TG_URL_IOS" property="tgUrlIos" jdbcType="VARCHAR" />
+        <result column="TG_URL_AND" property="tgUrlAnd" jdbcType="VARCHAR" />
+        <result column="NICK" property="nick" jdbcType="OTHER" />
+        <result column="SELLER_ID" property="sellerId" jdbcType="DECIMAL" />
+        <result column="VOLUME" property="volume" jdbcType="DECIMAL" />
+        <result column="TK_RATE" property="tkRate" jdbcType="DECIMAL" />
+        <result column="ZK_FINAL_PRICE_WAP" property="zkFinalPriceWap" jdbcType="DECIMAL" />
+        <result column="AFTER_COUPON_PRICE" property="afterCouponPrice" jdbcType="DECIMAL" />
+        <result column="AFTER_COUPON_PRICE_WAP" property="afterCouponPriceWap" jdbcType="DECIMAL" />
+        <result column="SHOP_TITLE" property="shopTitle" jdbcType="OTHER" />
+        <result column="EVENT_START_TIME" property="eventStartTime" jdbcType="TIMESTAMP" />
+        <result column="EVENT_END_TIME" property="eventEndTime" jdbcType="TIMESTAMP" />
+        <result column="TYPE" property="type" jdbcType="DECIMAL" />
+        <result column="STATUS" property="status" jdbcType="DECIMAL" />
+        <result column="COUPON_INFO" property="couponInfo" jdbcType="OTHER" />
+        <result column="COUPON_START_TIME" property="couponStartTime" jdbcType="TIMESTAMP" />
+        <result column="COUPON_END_TIME" property="couponEndTime" jdbcType="TIMESTAMP" />
+        <result column="FAVORITESID" property="favoritesid" jdbcType="DECIMAL" />
+        <result column="ADDTIME" property="addtime" jdbcType="TIMESTAMP" />
+        <result column="UPDATETIME" property="updatetime" jdbcType="TIMESTAMP" />
+        <result column="ISTMALL" property="istmall" jdbcType="DECIMAL" />
+        <result column="SORT" property="sort" jdbcType="DECIMAL" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        ID, NUM_IID, TITLE, PICT_URL, RESERVE_PRICE, ZK_FINAL_PRICE, USER_TYPE, PROVCITY,
+        ITEM_URL, TG_URL_PC, TG_URL_WAP, TG_URL_IOS, TG_URL_AND, NICK, SELLER_ID, VOLUME,
+        TK_RATE, ZK_FINAL_PRICE_WAP, AFTER_COUPON_PRICE, AFTER_COUPON_PRICE_WAP, SHOP_TITLE,
+        EVENT_START_TIME, EVENT_END_TIME, TYPE, STATUS, COUPON_INFO, COUPON_START_TIME, COUPON_END_TIME,
+        FAVORITESID, ADDTIME, UPDATETIME, ISTMALL, SORT
+    </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select
+        <include refid="Base_Column_List" />
+        from ZM_TBKITEM
+        where ID = #{id,jdbcType=DECIMAL}
+    </select>
+
+    <select id="selectAll" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from ZM_TBKITEM
+</select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from ZM_TBKITEM
+        where ID = #{id,jdbcType=DECIMAL}
+    </delete>
+
+    <insert id="insert" parameterType="com.xiaoqiang.entiy.ZmTbkitem" >
+        insert into ZM_TBKITEM (ID, NUM_IID, TITLE,
+            PICT_URL, RESERVE_PRICE, ZK_FINAL_PRICE,
+            USER_TYPE, PROVCITY, ITEM_URL,
+            TG_URL_PC, TG_URL_WAP, TG_URL_IOS,
+            TG_URL_AND, NICK, SELLER_ID,
+            VOLUME, TK_RATE, ZK_FINAL_PRICE_WAP,
+            AFTER_COUPON_PRICE, AFTER_COUPON_PRICE_WAP,
+            SHOP_TITLE, EVENT_START_TIME, EVENT_END_TIME,
+            TYPE, STATUS, COUPON_INFO,
+            COUPON_START_TIME, COUPON_END_TIME, FAVORITESID,
+            ADDTIME, UPDATETIME, ISTMALL,
+            SORT)
+        values (#{id,jdbcType=DECIMAL}, #{numIid,jdbcType=VARCHAR}, #{title,jdbcType=OTHER},
+            #{pictUrl,jdbcType=VARCHAR}, #{reservePrice,jdbcType=DECIMAL}, #{zkFinalPrice,jdbcType=DECIMAL},
+            #{userType,jdbcType=DECIMAL}, #{provcity,jdbcType=OTHER}, #{itemUrl,jdbcType=VARCHAR},
+            #{tgUrlPc,jdbcType=VARCHAR}, #{tgUrlWap,jdbcType=VARCHAR}, #{tgUrlIos,jdbcType=VARCHAR},
+            #{tgUrlAnd,jdbcType=VARCHAR}, #{nick,jdbcType=OTHER}, #{sellerId,jdbcType=DECIMAL},
+            #{volume,jdbcType=DECIMAL}, #{tkRate,jdbcType=DECIMAL}, #{zkFinalPriceWap,jdbcType=DECIMAL},
+            #{afterCouponPrice,jdbcType=DECIMAL}, #{afterCouponPriceWap,jdbcType=DECIMAL},
+            #{shopTitle,jdbcType=OTHER}, #{eventStartTime,jdbcType=TIMESTAMP}, #{eventEndTime,jdbcType=TIMESTAMP},
+            #{type,jdbcType=DECIMAL}, #{status,jdbcType=DECIMAL}, #{couponInfo,jdbcType=OTHER},
+            #{couponStartTime,jdbcType=TIMESTAMP}, #{couponEndTime,jdbcType=TIMESTAMP}, #{favoritesid,jdbcType=DECIMAL},
+            #{addtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, #{istmall,jdbcType=DECIMAL},
+            #{sort,jdbcType=DECIMAL})
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.xiaoqiang.entiy.ZmTbkitem" >
+        insert into ZM_TBKITEM
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                ID,
+            </if>
+            <if test="numIid != null" >
+                NUM_IID,
+            </if>
+            <if test="title != null" >
+                TITLE,
+            </if>
+            <if test="pictUrl != null" >
+                PICT_URL,
+            </if>
+            <if test="reservePrice != null" >
+                RESERVE_PRICE,
+            </if>
+            <if test="zkFinalPrice != null" >
+                ZK_FINAL_PRICE,
+            </if>
+            <if test="userType != null" >
+                USER_TYPE,
+            </if>
+            <if test="provcity != null" >
+                PROVCITY,
+            </if>
+            <if test="itemUrl != null" >
+                ITEM_URL,
+            </if>
+            <if test="tgUrlPc != null" >
+                TG_URL_PC,
+            </if>
+            <if test="tgUrlWap != null" >
+                TG_URL_WAP,
+            </if>
+            <if test="tgUrlIos != null" >
+                TG_URL_IOS,
+            </if>
+            <if test="tgUrlAnd != null" >
+                TG_URL_AND,
+            </if>
+            <if test="nick != null" >
+                NICK,
+            </if>
+            <if test="sellerId != null" >
+                SELLER_ID,
+            </if>
+            <if test="volume != null" >
+                VOLUME,
+            </if>
+            <if test="tkRate != null" >
+                TK_RATE,
+            </if>
+            <if test="zkFinalPriceWap != null" >
+                ZK_FINAL_PRICE_WAP,
+            </if>
+            <if test="afterCouponPrice != null" >
+                AFTER_COUPON_PRICE,
+            </if>
+            <if test="afterCouponPriceWap != null" >
+                AFTER_COUPON_PRICE_WAP,
+            </if>
+            <if test="shopTitle != null" >
+                SHOP_TITLE,
+            </if>
+            <if test="eventStartTime != null" >
+                EVENT_START_TIME,
+            </if>
+            <if test="eventEndTime != null" >
+                EVENT_END_TIME,
+            </if>
+            <if test="type != null" >
+                TYPE,
+            </if>
+            <if test="status != null" >
+                STATUS,
+            </if>
+            <if test="couponInfo != null" >
+                COUPON_INFO,
+            </if>
+            <if test="couponStartTime != null" >
+                COUPON_START_TIME,
+            </if>
+            <if test="couponEndTime != null" >
+                COUPON_END_TIME,
+            </if>
+            <if test="favoritesid != null" >
+                FAVORITESID,
+            </if>
+            <if test="addtime != null" >
+                ADDTIME,
+            </if>
+            <if test="updatetime != null" >
+                UPDATETIME,
+            </if>
+            <if test="istmall != null" >
+                ISTMALL,
+            </if>
+            <if test="sort != null" >
+                SORT,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=DECIMAL},
+            </if>
+            <if test="numIid != null" >
+                #{numIid,jdbcType=VARCHAR},
+            </if>
+            <if test="title != null" >
+                #{title,jdbcType=OTHER},
+            </if>
+            <if test="pictUrl != null" >
+                #{pictUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="reservePrice != null" >
+                #{reservePrice,jdbcType=DECIMAL},
+            </if>
+            <if test="zkFinalPrice != null" >
+                #{zkFinalPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="userType != null" >
+                #{userType,jdbcType=DECIMAL},
+            </if>
+            <if test="provcity != null" >
+                #{provcity,jdbcType=OTHER},
+            </if>
+            <if test="itemUrl != null" >
+                #{itemUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="tgUrlPc != null" >
+                #{tgUrlPc,jdbcType=VARCHAR},
+            </if>
+            <if test="tgUrlWap != null" >
+                #{tgUrlWap,jdbcType=VARCHAR},
+            </if>
+            <if test="tgUrlIos != null" >
+                #{tgUrlIos,jdbcType=VARCHAR},
+            </if>
+            <if test="tgUrlAnd != null" >
+                #{tgUrlAnd,jdbcType=VARCHAR},
+            </if>
+            <if test="nick != null" >
+                #{nick,jdbcType=OTHER},
+            </if>
+            <if test="sellerId != null" >
+                #{sellerId,jdbcType=DECIMAL},
+            </if>
+            <if test="volume != null" >
+                #{volume,jdbcType=DECIMAL},
+            </if>
+            <if test="tkRate != null" >
+                #{tkRate,jdbcType=DECIMAL},
+            </if>
+            <if test="zkFinalPriceWap != null" >
+                #{zkFinalPriceWap,jdbcType=DECIMAL},
+            </if>
+            <if test="afterCouponPrice != null" >
+                #{afterCouponPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="afterCouponPriceWap != null" >
+                #{afterCouponPriceWap,jdbcType=DECIMAL},
+            </if>
+            <if test="shopTitle != null" >
+                #{shopTitle,jdbcType=OTHER},
+            </if>
+            <if test="eventStartTime != null" >
+                #{eventStartTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="eventEndTime != null" >
+                #{eventEndTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="type != null" >
+                #{type,jdbcType=DECIMAL},
+            </if>
+            <if test="status != null" >
+                #{status,jdbcType=DECIMAL},
+            </if>
+            <if test="couponInfo != null" >
+                #{couponInfo,jdbcType=OTHER},
+            </if>
+            <if test="couponStartTime != null" >
+                #{couponStartTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="couponEndTime != null" >
+                #{couponEndTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="favoritesid != null" >
+                #{favoritesid,jdbcType=DECIMAL},
+            </if>
+            <if test="addtime != null" >
+                #{addtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updatetime != null" >
+                #{updatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="istmall != null" >
+                #{istmall,jdbcType=DECIMAL},
+            </if>
+            <if test="sort != null" >
+                #{sort,jdbcType=DECIMAL},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.xiaoqiang.entiy.ZmTbkitem" >
+        update ZM_TBKITEM
+        <set >
+            <if test="numIid != null" >
+                NUM_IID = #{numIid,jdbcType=VARCHAR},
+            </if>
+            <if test="title != null" >
+                TITLE = #{title,jdbcType=OTHER},
+            </if>
+            <if test="pictUrl != null" >
+                PICT_URL = #{pictUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="reservePrice != null" >
+                RESERVE_PRICE = #{reservePrice,jdbcType=DECIMAL},
+            </if>
+            <if test="zkFinalPrice != null" >
+                ZK_FINAL_PRICE = #{zkFinalPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="userType != null" >
+                USER_TYPE = #{userType,jdbcType=DECIMAL},
+            </if>
+            <if test="provcity != null" >
+                PROVCITY = #{provcity,jdbcType=OTHER},
+            </if>
+            <if test="itemUrl != null" >
+                ITEM_URL = #{itemUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="tgUrlPc != null" >
+                TG_URL_PC = #{tgUrlPc,jdbcType=VARCHAR},
+            </if>
+            <if test="tgUrlWap != null" >
+                TG_URL_WAP = #{tgUrlWap,jdbcType=VARCHAR},
+            </if>
+            <if test="tgUrlIos != null" >
+                TG_URL_IOS = #{tgUrlIos,jdbcType=VARCHAR},
+            </if>
+            <if test="tgUrlAnd != null" >
+                TG_URL_AND = #{tgUrlAnd,jdbcType=VARCHAR},
+            </if>
+            <if test="nick != null" >
+                NICK = #{nick,jdbcType=OTHER},
+            </if>
+            <if test="sellerId != null" >
+                SELLER_ID = #{sellerId,jdbcType=DECIMAL},
+            </if>
+            <if test="volume != null" >
+                VOLUME = #{volume,jdbcType=DECIMAL},
+            </if>
+            <if test="tkRate != null" >
+                TK_RATE = #{tkRate,jdbcType=DECIMAL},
+            </if>
+            <if test="zkFinalPriceWap != null" >
+                ZK_FINAL_PRICE_WAP = #{zkFinalPriceWap,jdbcType=DECIMAL},
+            </if>
+            <if test="afterCouponPrice != null" >
+                AFTER_COUPON_PRICE = #{afterCouponPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="afterCouponPriceWap != null" >
+                AFTER_COUPON_PRICE_WAP = #{afterCouponPriceWap,jdbcType=DECIMAL},
+            </if>
+            <if test="shopTitle != null" >
+                SHOP_TITLE = #{shopTitle,jdbcType=OTHER},
+            </if>
+            <if test="eventStartTime != null" >
+                EVENT_START_TIME = #{eventStartTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="eventEndTime != null" >
+                EVENT_END_TIME = #{eventEndTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="type != null" >
+                TYPE = #{type,jdbcType=DECIMAL},
+            </if>
+            <if test="status != null" >
+                STATUS = #{status,jdbcType=DECIMAL},
+            </if>
+            <if test="couponInfo != null" >
+                COUPON_INFO = #{couponInfo,jdbcType=OTHER},
+            </if>
+            <if test="couponStartTime != null" >
+                COUPON_START_TIME = #{couponStartTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="couponEndTime != null" >
+                COUPON_END_TIME = #{couponEndTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="favoritesid != null" >
+                FAVORITESID = #{favoritesid,jdbcType=DECIMAL},
+            </if>
+            <if test="addtime != null" >
+                ADDTIME = #{addtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updatetime != null" >
+                UPDATETIME = #{updatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="istmall != null" >
+                ISTMALL = #{istmall,jdbcType=DECIMAL},
+            </if>
+            <if test="sort != null" >
+                SORT = #{sort,jdbcType=DECIMAL},
+            </if>
+        </set>
+        where ID = #{id,jdbcType=DECIMAL}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.xiaoqiang.entiy.ZmTbkitem" >
+        update ZM_TBKITEM
+        set NUM_IID = #{numIid,jdbcType=VARCHAR},
+            TITLE = #{title,jdbcType=OTHER},
+            PICT_URL = #{pictUrl,jdbcType=VARCHAR},
+            RESERVE_PRICE = #{reservePrice,jdbcType=DECIMAL},
+            ZK_FINAL_PRICE = #{zkFinalPrice,jdbcType=DECIMAL},
+            USER_TYPE = #{userType,jdbcType=DECIMAL},
+            PROVCITY = #{provcity,jdbcType=OTHER},
+            ITEM_URL = #{itemUrl,jdbcType=VARCHAR},
+            TG_URL_PC = #{tgUrlPc,jdbcType=VARCHAR},
+            TG_URL_WAP = #{tgUrlWap,jdbcType=VARCHAR},
+            TG_URL_IOS = #{tgUrlIos,jdbcType=VARCHAR},
+            TG_URL_AND = #{tgUrlAnd,jdbcType=VARCHAR},
+            NICK = #{nick,jdbcType=OTHER},
+            SELLER_ID = #{sellerId,jdbcType=DECIMAL},
+            VOLUME = #{volume,jdbcType=DECIMAL},
+            TK_RATE = #{tkRate,jdbcType=DECIMAL},
+            ZK_FINAL_PRICE_WAP = #{zkFinalPriceWap,jdbcType=DECIMAL},
+            AFTER_COUPON_PRICE = #{afterCouponPrice,jdbcType=DECIMAL},
+            AFTER_COUPON_PRICE_WAP = #{afterCouponPriceWap,jdbcType=DECIMAL},
+            SHOP_TITLE = #{shopTitle,jdbcType=OTHER},
+            EVENT_START_TIME = #{eventStartTime,jdbcType=TIMESTAMP},
+            EVENT_END_TIME = #{eventEndTime,jdbcType=TIMESTAMP},
+            TYPE = #{type,jdbcType=DECIMAL},
+            STATUS = #{status,jdbcType=DECIMAL},
+            COUPON_INFO = #{couponInfo,jdbcType=OTHER},
+            COUPON_START_TIME = #{couponStartTime,jdbcType=TIMESTAMP},
+            COUPON_END_TIME = #{couponEndTime,jdbcType=TIMESTAMP},
+            FAVORITESID = #{favoritesid,jdbcType=DECIMAL},
+            ADDTIME = #{addtime,jdbcType=TIMESTAMP},
+            UPDATETIME = #{updatetime,jdbcType=TIMESTAMP},
+            ISTMALL = #{istmall,jdbcType=DECIMAL},
+            SORT = #{sort,jdbcType=DECIMAL}
+        where ID = #{id,jdbcType=DECIMAL}
+    </update>
+</mapper>

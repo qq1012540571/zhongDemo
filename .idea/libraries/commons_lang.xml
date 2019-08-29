@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="commons-lang">
+    <CLASSES>
+      <root url="file://$MAVEN_REPOSITORY$/commons-lang" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

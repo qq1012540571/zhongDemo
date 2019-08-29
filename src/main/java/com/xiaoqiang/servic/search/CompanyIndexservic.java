@@ -22,4 +22,7 @@ public interface CompanyIndexservic {
      */
     void search(String name);
 
+
+
+
 }

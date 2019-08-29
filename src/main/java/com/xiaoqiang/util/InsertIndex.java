@@ -19,34 +19,21 @@ public class InsertIndex {
             RestHighLevelClient client = InitDemo.getClient();
             IndexRequest request = new IndexRequest("user");
             Map<String, Object> jsonMap = new HashMap<>();
-            jsonMap.put("name", "光头强");
+            jsonMap.put("name", "光头111强");
             jsonMap.put("age", 25);
+            jsonMap.put("id",4);
+             request.id("3").source(jsonMap);
 
-
-            IndexResponse indexResponse = null;
+           IndexResponse indexResponse = null;
             try {
                 indexResponse = client.index(request, RequestOptions.DEFAULT);
             } catch (IOException e) {
                 e.printStackTrace();
             }
             String index = indexResponse.getIndex();
-            String id = indexResponse.getId();
-            if (indexResponse.getResult() == DocWriteResponse.Result.CREATED) {
-                System.out.println("创建索引"+id);
-            } else if (indexResponse.getResult() == DocWriteResponse.Result.UPDATED) {
-                System.out.println("更新索引");
-            }
-            ReplicationResponse.ShardInfo shardInfo = indexResponse.getShardInfo();
-            if (shardInfo.getTotal() != shardInfo.getSuccessful()) {
-                System.out.println("失败数量");
-            }
-            if (shardInfo.getFailed() > 0) {
-                for (ReplicationResponse.ShardInfo.Failure failure :
-                        shardInfo.getFailures()) {
-                    String reason = failure.reason();
-                    System.out.println(reason);
-                }
-            }
+            System.out.println(index);
+
+
 
     }
 }

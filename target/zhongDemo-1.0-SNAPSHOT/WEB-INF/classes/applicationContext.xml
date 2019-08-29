@@ -25,7 +25,7 @@
 
     <!-- 1. 数据源 -->
     <!-- 读取db.properties文件. 读取到数据库信息 -->
- <!--   <context:property-placeholder location="classpath:db.properties"/>
+  <context:property-placeholder location="classpath:db.properties"/>
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="${jdbc.driver}"></property>
         <property name="url" value="${jdbc.url}"></property>
@@ -33,23 +33,18 @@
         <property name="password" value="${jdbc.password}"></property>
     </bean>
 
-    &lt;!&ndash; 2.  创建sqlSessionFactory ==> mybatis核心配置文件的读取 &ndash;&gt;
+
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"></property>
         <property name="configLocation" value="classpath:mybatis-config.xml"></property>
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
     </bean>
 
-    &lt;!&ndash; 3.扫描mybatis的mapper接口路径 &ndash;&gt;
-    &lt;!&ndash; 这个bean可以把我们的mapper接口直接扫描到. 直接把接口扫描完. 注册到spring的bean中 &ndash;&gt;
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
-        &lt;!&ndash; 会在提供的base包下寻找interface .根据interface的名字. 将首字母小写生成这个接口所对应的bean &ndash;&gt;
-        <property name="basePackage" value="com.xiaoqiang.dao"></property>
+          <property name="basePackage" value="com.xiaoqiang.dao"></property>
     </bean>
-
-    &lt;!&ndash; 4.事务处理 &ndash;&gt;
-    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+  <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"></property>
     </bean>
 
@@ -67,7 +62,7 @@
     <aop:config>
         <aop:pointcut expression="execution(* com.xiaoqiang.service.*.*.*(..))" id="cut"/>
         <aop:advisor advice-ref="txManager" pointcut-ref="cut"/>
-    </aop:config>-->
+    </aop:config>
 
     <!-- 用注解处理事务
     <tx:annotation-driven transaction-manager="transactionManager"/>
