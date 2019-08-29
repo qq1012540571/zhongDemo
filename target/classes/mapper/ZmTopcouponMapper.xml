@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xiaoqiang.dao.ZmTopcouponMapper" >
+
+    <resultMap id="BaseResultMap" type="com.xiaoqiang.entiy.ZmTopcoupon" >
+        <id column="ID" property="id" jdbcType="DECIMAL" />
+        <result column="PRODUCTID" property="productid" jdbcType="DECIMAL" />
+        <result column="PRODUCTNAME" property="productname" jdbcType="VARCHAR" />
+        <result column="BIGCLASSID" property="bigclassid" jdbcType="DECIMAL" />
+        <result column="CLASSID" property="classid" jdbcType="DECIMAL" />
+        <result column="MONTHSALE" property="monthsale" jdbcType="DECIMAL" />
+        <result column="PRICE" property="price" jdbcType="DECIMAL" />
+        <result column="COMMISSION" property="commission" jdbcType="DECIMAL" />
+        <result column="COUPONPRICE" property="couponprice" jdbcType="DECIMAL" />
+        <result column="COUPONPERCENT" property="couponpercent" jdbcType="DECIMAL" />
+        <result column="COUPONVALUE" property="couponvalue" jdbcType="DECIMAL" />
+        <result column="MAINIMG" property="mainimg" jdbcType="VARCHAR" />
+        <result column="PLATFORM" property="platform" jdbcType="VARCHAR" />
+        <result column="PLATTYPE" property="plattype" jdbcType="DECIMAL" />
+        <result column="COUPONID" property="couponid" jdbcType="VARCHAR" />
+        <result column="COUPONALLNUM" property="couponallnum" jdbcType="DECIMAL" />
+        <result column="COUPONLEFTNUM" property="couponleftnum" jdbcType="DECIMAL" />
+        <result column="COUPONDETAIL" property="coupondetail" jdbcType="VARCHAR" />
+        <result column="COUPONTAKENNUM" property="coupontakennum" jdbcType="DECIMAL" />
+        <result column="STARTTIME" property="starttime" jdbcType="TIMESTAMP" />
+        <result column="ENDTIME" property="endtime" jdbcType="TIMESTAMP" />
+        <result column="PCLINK" property="pclink" jdbcType="VARCHAR" />
+        <result column="WAPLINK" property="waplink" jdbcType="VARCHAR" />
+        <result column="IOSLINK" property="ioslink" jdbcType="VARCHAR" />
+        <result column="ANDLINK" property="andlink" jdbcType="VARCHAR" />
+        <result column="ADDTIME" property="addtime" jdbcType="TIMESTAMP" />
+        <result column="ISON" property="ison" jdbcType="DECIMAL" />
+        <result column="CAT_NAME" property="catName" jdbcType="VARCHAR" />
+        <result column="PRODUCTDETAILPAGE" property="productdetailpage" jdbcType="VARCHAR" />
+        <result column="TBKLINK" property="tbklink" jdbcType="VARCHAR" />
+        <result column="INCOMEPERCENT" property="incomepercent" jdbcType="DECIMAL" />
+        <result column="NICK" property="nick" jdbcType="VARCHAR" />
+        <result column="SELLERID" property="sellerid" jdbcType="DECIMAL" />
+        <result column="STORENAME" property="storename" jdbcType="VARCHAR" />
+        <result column="ISDELETE" property="isdelete" jdbcType="DECIMAL" />
+        <result column="UPDATETIME" property="updatetime" jdbcType="TIMESTAMP" />
+        <result column="ISINDEX" property="isindex" jdbcType="DECIMAL" />
+        <result column="SORT" property="sort" jdbcType="DECIMAL" />
+        <result column="INDEXENDTIME" property="indexendtime" jdbcType="TIMESTAMP" />
+        <result column="ISFIRSTPAGE" property="isfirstpage" jdbcType="DECIMAL" />
+        <result column="FIRSTPAGESORT" property="firstpagesort" jdbcType="DECIMAL" />
+        <result column="FIRSTPAGEENDTIME" property="firstpageendtime" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        ID, PRODUCTID, PRODUCTNAME, BIGCLASSID, CLASSID, MONTHSALE, PRICE, COMMISSION, COUPONPRICE, 
+        COUPONPERCENT, COUPONVALUE, MAINIMG, PLATFORM, PLATTYPE, COUPONID, COUPONALLNUM, 
+        COUPONLEFTNUM, COUPONDETAIL, COUPONTAKENNUM, STARTTIME, ENDTIME, PCLINK, WAPLINK, 
+        IOSLINK, ANDLINK, ADDTIME, ISON, CAT_NAME, PRODUCTDETAILPAGE, TBKLINK, INCOMEPERCENT, 
+        NICK, SELLERID, STORENAME, ISDELETE, UPDATETIME, ISINDEX, SORT, INDEXENDTIME, ISFIRSTPAGE, 
+        FIRSTPAGESORT, FIRSTPAGEENDTIME
+    </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select 
+        <include refid="Base_Column_List" />
+        from ZM_TOPCOUPON
+        where ID = #{id,jdbcType=DECIMAL}
+    </select>
+
+    <select id="selectAll" resultMap="BaseResultMap"  >
+        select
+        <include refid="Base_Column_List" />
+        from ZM_TOPCOUPON
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from ZM_TOPCOUPON
+        where ID = #{id,jdbcType=DECIMAL}
+    </delete>
+
+    <insert id="insert" parameterType="com.xiaoqiang.entiy.ZmTopcoupon" >
+        insert into ZM_TOPCOUPON (ID, PRODUCTID, PRODUCTNAME, 
+            BIGCLASSID, CLASSID, MONTHSALE, 
+            PRICE, COMMISSION, COUPONPRICE, 
+            COUPONPERCENT, COUPONVALUE, MAINIMG, 
+            PLATFORM, PLATTYPE, COUPONID, 
+            COUPONALLNUM, COUPONLEFTNUM, COUPONDETAIL, 
+            COUPONTAKENNUM, STARTTIME, ENDTIME, 
+            PCLINK, WAPLINK, IOSLINK, 
+            ANDLINK, ADDTIME, ISON, 
+            CAT_NAME, PRODUCTDETAILPAGE, TBKLINK, 
+            INCOMEPERCENT, NICK, SELLERID, 
+            STORENAME, ISDELETE, UPDATETIME, 
+            ISINDEX, SORT, INDEXENDTIME, 
+            ISFIRSTPAGE, FIRSTPAGESORT, FIRSTPAGEENDTIME
+            )
+        values (#{id,jdbcType=DECIMAL}, #{productid,jdbcType=DECIMAL}, #{productname,jdbcType=VARCHAR}, 
+            #{bigclassid,jdbcType=DECIMAL}, #{classid,jdbcType=DECIMAL}, #{monthsale,jdbcType=DECIMAL}, 
+            #{price,jdbcType=DECIMAL}, #{commission,jdbcType=DECIMAL}, #{couponprice,jdbcType=DECIMAL}, 
+            #{couponpercent,jdbcType=DECIMAL}, #{couponvalue,jdbcType=DECIMAL}, #{mainimg,jdbcType=VARCHAR}, 
+            #{platform,jdbcType=VARCHAR}, #{plattype,jdbcType=DECIMAL}, #{couponid,jdbcType=VARCHAR}, 
+            #{couponallnum,jdbcType=DECIMAL}, #{couponleftnum,jdbcType=DECIMAL}, #{coupondetail,jdbcType=VARCHAR}, 
+            #{coupontakennum,jdbcType=DECIMAL}, #{starttime,jdbcType=TIMESTAMP}, #{endtime,jdbcType=TIMESTAMP}, 
+            #{pclink,jdbcType=VARCHAR}, #{waplink,jdbcType=VARCHAR}, #{ioslink,jdbcType=VARCHAR}, 
+            #{andlink,jdbcType=VARCHAR}, #{addtime,jdbcType=TIMESTAMP}, #{ison,jdbcType=DECIMAL}, 
+            #{catName,jdbcType=VARCHAR}, #{productdetailpage,jdbcType=VARCHAR}, #{tbklink,jdbcType=VARCHAR}, 
+            #{incomepercent,jdbcType=DECIMAL}, #{nick,jdbcType=VARCHAR}, #{sellerid,jdbcType=DECIMAL}, 
+            #{storename,jdbcType=VARCHAR}, #{isdelete,jdbcType=DECIMAL}, #{updatetime,jdbcType=TIMESTAMP}, 
+            #{isindex,jdbcType=DECIMAL}, #{sort,jdbcType=DECIMAL}, #{indexendtime,jdbcType=TIMESTAMP}, 
+            #{isfirstpage,jdbcType=DECIMAL}, #{firstpagesort,jdbcType=DECIMAL}, #{firstpageendtime,jdbcType=TIMESTAMP}
+            )
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.xiaoqiang.entiy.ZmTopcoupon" >
+        insert into ZM_TOPCOUPON
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                ID,
+            </if>
+            <if test="productid != null" >
+                PRODUCTID,
+            </if>
+            <if test="productname != null" >
+                PRODUCTNAME,
+            </if>
+            <if test="bigclassid != null" >
+                BIGCLASSID,
+            </if>
+            <if test="classid != null" >
+                CLASSID,
+            </if>
+            <if test="monthsale != null" >
+                MONTHSALE,
+            </if>
+            <if test="price != null" >
+                PRICE,
+            </if>
+            <if test="commission != null" >
+                COMMISSION,
+            </if>
+            <if test="couponprice != null" >
+                COUPONPRICE,
+            </if>
+            <if test="couponpercent != null" >
+                COUPONPERCENT,
+            </if>
+            <if test="couponvalue != null" >
+                COUPONVALUE,
+            </if>
+            <if test="mainimg != null" >
+                MAINIMG,
+            </if>
+            <if test="platform != null" >
+                PLATFORM,
+            </if>
+            <if test="plattype != null" >
+                PLATTYPE,
+            </if>
+            <if test="couponid != null" >
+                COUPONID,
+            </if>
+            <if test="couponallnum != null" >
+                COUPONALLNUM,
+            </if>
+            <if test="couponleftnum != null" >
+                COUPONLEFTNUM,
+            </if>
+            <if test="coupondetail != null" >
+                COUPONDETAIL,
+            </if>
+            <if test="coupontakennum != null" >
+                COUPONTAKENNUM,
+            </if>
+            <if test="starttime != null" >
+                STARTTIME,
+            </if>
+            <if test="endtime != null" >
+                ENDTIME,
+            </if>
+            <if test="pclink != null" >
+                PCLINK,
+            </if>
+            <if test="waplink != null" >
+                WAPLINK,
+            </if>
+            <if test="ioslink != null" >
+                IOSLINK,
+            </if>
+            <if test="andlink != null" >
+                ANDLINK,
+            </if>
+            <if test="addtime != null" >
+                ADDTIME,
+            </if>
+            <if test="ison != null" >
+                ISON,
+            </if>
+            <if test="catName != null" >
+                CAT_NAME,
+            </if>
+            <if test="productdetailpage != null" >
+                PRODUCTDETAILPAGE,
+            </if>
+            <if test="tbklink != null" >
+                TBKLINK,
+            </if>
+            <if test="incomepercent != null" >
+                INCOMEPERCENT,
+            </if>
+            <if test="nick != null" >
+                NICK,
+            </if>
+            <if test="sellerid != null" >
+                SELLERID,
+            </if>
+            <if test="storename != null" >
+                STORENAME,
+            </if>
+            <if test="isdelete != null" >
+                ISDELETE,
+            </if>
+            <if test="updatetime != null" >
+                UPDATETIME,
+            </if>
+            <if test="isindex != null" >
+                ISINDEX,
+            </if>
+            <if test="sort != null" >
+                SORT,
+            </if>
+            <if test="indexendtime != null" >
+                INDEXENDTIME,
+            </if>
+            <if test="isfirstpage != null" >
+                ISFIRSTPAGE,
+            </if>
+            <if test="firstpagesort != null" >
+                FIRSTPAGESORT,
+            </if>
+            <if test="firstpageendtime != null" >
+                FIRSTPAGEENDTIME,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=DECIMAL},
+            </if>
+            <if test="productid != null" >
+                #{productid,jdbcType=DECIMAL},
+            </if>
+            <if test="productname != null" >
+                #{productname,jdbcType=VARCHAR},
+            </if>
+            <if test="bigclassid != null" >
+                #{bigclassid,jdbcType=DECIMAL},
+            </if>
+            <if test="classid != null" >
+                #{classid,jdbcType=DECIMAL},
+            </if>
+            <if test="monthsale != null" >
+                #{monthsale,jdbcType=DECIMAL},
+            </if>
+            <if test="price != null" >
+                #{price,jdbcType=DECIMAL},
+            </if>
+            <if test="commission != null" >
+                #{commission,jdbcType=DECIMAL},
+            </if>
+            <if test="couponprice != null" >
+                #{couponprice,jdbcType=DECIMAL},
+            </if>
+            <if test="couponpercent != null" >
+                #{couponpercent,jdbcType=DECIMAL},
+            </if>
+            <if test="couponvalue != null" >
+                #{couponvalue,jdbcType=DECIMAL},
+            </if>
+            <if test="mainimg != null" >
+                #{mainimg,jdbcType=VARCHAR},
+            </if>
+            <if test="platform != null" >
+                #{platform,jdbcType=VARCHAR},
+            </if>
+            <if test="plattype != null" >
+                #{plattype,jdbcType=DECIMAL},
+            </if>
+            <if test="couponid != null" >
+                #{couponid,jdbcType=VARCHAR},
+            </if>
+            <if test="couponallnum != null" >
+                #{couponallnum,jdbcType=DECIMAL},
+            </if>
+            <if test="couponleftnum != null" >
+                #{couponleftnum,jdbcType=DECIMAL},
+            </if>
+            <if test="coupondetail != null" >
+                #{coupondetail,jdbcType=VARCHAR},
+            </if>
+            <if test="coupontakennum != null" >
+                #{coupontakennum,jdbcType=DECIMAL},
+            </if>
+            <if test="starttime != null" >
+                #{starttime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="endtime != null" >
+                #{endtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="pclink != null" >
+                #{pclink,jdbcType=VARCHAR},
+            </if>
+            <if test="waplink != null" >
+                #{waplink,jdbcType=VARCHAR},
+            </if>
+            <if test="ioslink != null" >
+                #{ioslink,jdbcType=VARCHAR},
+            </if>
+            <if test="andlink != null" >
+                #{andlink,jdbcType=VARCHAR},
+            </if>
+            <if test="addtime != null" >
+                #{addtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="ison != null" >
+                #{ison,jdbcType=DECIMAL},
+            </if>
+            <if test="catName != null" >
+                #{catName,jdbcType=VARCHAR},
+            </if>
+            <if test="productdetailpage != null" >
+                #{productdetailpage,jdbcType=VARCHAR},
+            </if>
+            <if test="tbklink != null" >
+                #{tbklink,jdbcType=VARCHAR},
+            </if>
+            <if test="incomepercent != null" >
+                #{incomepercent,jdbcType=DECIMAL},
+            </if>
+            <if test="nick != null" >
+                #{nick,jdbcType=VARCHAR},
+            </if>
+            <if test="sellerid != null" >
+                #{sellerid,jdbcType=DECIMAL},
+            </if>
+            <if test="storename != null" >
+                #{storename,jdbcType=VARCHAR},
+            </if>
+            <if test="isdelete != null" >
+                #{isdelete,jdbcType=DECIMAL},
+            </if>
+            <if test="updatetime != null" >
+                #{updatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isindex != null" >
+                #{isindex,jdbcType=DECIMAL},
+            </if>
+            <if test="sort != null" >
+                #{sort,jdbcType=DECIMAL},
+            </if>
+            <if test="indexendtime != null" >
+                #{indexendtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isfirstpage != null" >
+                #{isfirstpage,jdbcType=DECIMAL},
+            </if>
+            <if test="firstpagesort != null" >
+                #{firstpagesort,jdbcType=DECIMAL},
+            </if>
+            <if test="firstpageendtime != null" >
+                #{firstpageendtime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.xiaoqiang.entiy.ZmTopcoupon" >
+        update ZM_TOPCOUPON
+        <set >
+            <if test="productid != null" >
+                PRODUCTID = #{productid,jdbcType=DECIMAL},
+            </if>
+            <if test="productname != null" >
+                PRODUCTNAME = #{productname,jdbcType=VARCHAR},
+            </if>
+            <if test="bigclassid != null" >
+                BIGCLASSID = #{bigclassid,jdbcType=DECIMAL},
+            </if>
+            <if test="classid != null" >
+                CLASSID = #{classid,jdbcType=DECIMAL},
+            </if>
+            <if test="monthsale != null" >
+                MONTHSALE = #{monthsale,jdbcType=DECIMAL},
+            </if>
+            <if test="price != null" >
+                PRICE = #{price,jdbcType=DECIMAL},
+            </if>
+            <if test="commission != null" >
+                COMMISSION = #{commission,jdbcType=DECIMAL},
+            </if>
+            <if test="couponprice != null" >
+                COUPONPRICE = #{couponprice,jdbcType=DECIMAL},
+            </if>
+            <if test="couponpercent != null" >
+                COUPONPERCENT = #{couponpercent,jdbcType=DECIMAL},
+            </if>
+            <if test="couponvalue != null" >
+                COUPONVALUE = #{couponvalue,jdbcType=DECIMAL},
+            </if>
+            <if test="mainimg != null" >
+                MAINIMG = #{mainimg,jdbcType=VARCHAR},
+            </if>
+            <if test="platform != null" >
+                PLATFORM = #{platform,jdbcType=VARCHAR},
+            </if>
+            <if test="plattype != null" >
+                PLATTYPE = #{plattype,jdbcType=DECIMAL},
+            </if>
+            <if test="couponid != null" >
+                COUPONID = #{couponid,jdbcType=VARCHAR},
+            </if>
+            <if test="couponallnum != null" >
+                COUPONALLNUM = #{couponallnum,jdbcType=DECIMAL},
+            </if>
+            <if test="couponleftnum != null" >
+                COUPONLEFTNUM = #{couponleftnum,jdbcType=DECIMAL},
+            </if>
+            <if test="coupondetail != null" >
+                COUPONDETAIL = #{coupondetail,jdbcType=VARCHAR},
+            </if>
+            <if test="coupontakennum != null" >
+                COUPONTAKENNUM = #{coupontakennum,jdbcType=DECIMAL},
+            </if>
+            <if test="starttime != null" >
+                STARTTIME = #{starttime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="endtime != null" >
+                ENDTIME = #{endtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="pclink != null" >
+                PCLINK = #{pclink,jdbcType=VARCHAR},
+            </if>
+            <if test="waplink != null" >
+                WAPLINK = #{waplink,jdbcType=VARCHAR},
+            </if>
+            <if test="ioslink != null" >
+                IOSLINK = #{ioslink,jdbcType=VARCHAR},
+            </if>
+            <if test="andlink != null" >
+                ANDLINK = #{andlink,jdbcType=VARCHAR},
+            </if>
+            <if test="addtime != null" >
+                ADDTIME = #{addtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="ison != null" >
+                ISON = #{ison,jdbcType=DECIMAL},
+            </if>
+            <if test="catName != null" >
+                CAT_NAME = #{catName,jdbcType=VARCHAR},
+            </if>
+            <if test="productdetailpage != null" >
+                PRODUCTDETAILPAGE = #{productdetailpage,jdbcType=VARCHAR},
+            </if>
+            <if test="tbklink != null" >
+                TBKLINK = #{tbklink,jdbcType=VARCHAR},
+            </if>
+            <if test="incomepercent != null" >
+                INCOMEPERCENT = #{incomepercent,jdbcType=DECIMAL},
+            </if>
+            <if test="nick != null" >
+                NICK = #{nick,jdbcType=VARCHAR},
+            </if>
+            <if test="sellerid != null" >
+                SELLERID = #{sellerid,jdbcType=DECIMAL},
+            </if>
+            <if test="storename != null" >
+                STORENAME = #{storename,jdbcType=VARCHAR},
+            </if>
+            <if test="isdelete != null" >
+                ISDELETE = #{isdelete,jdbcType=DECIMAL},
+            </if>
+            <if test="updatetime != null" >
+                UPDATETIME = #{updatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isindex != null" >
+                ISINDEX = #{isindex,jdbcType=DECIMAL},
+            </if>
+            <if test="sort != null" >
+                SORT = #{sort,jdbcType=DECIMAL},
+            </if>
+            <if test="indexendtime != null" >
+                INDEXENDTIME = #{indexendtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isfirstpage != null" >
+                ISFIRSTPAGE = #{isfirstpage,jdbcType=DECIMAL},
+            </if>
+            <if test="firstpagesort != null" >
+                FIRSTPAGESORT = #{firstpagesort,jdbcType=DECIMAL},
+            </if>
+            <if test="firstpageendtime != null" >
+                FIRSTPAGEENDTIME = #{firstpageendtime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where ID = #{id,jdbcType=DECIMAL}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.xiaoqiang.entiy.ZmTopcoupon" >
+        update ZM_TOPCOUPON
+        set PRODUCTID = #{productid,jdbcType=DECIMAL},
+            PRODUCTNAME = #{productname,jdbcType=VARCHAR},
+            BIGCLASSID = #{bigclassid,jdbcType=DECIMAL},
+            CLASSID = #{classid,jdbcType=DECIMAL},
+            MONTHSALE = #{monthsale,jdbcType=DECIMAL},
+            PRICE = #{price,jdbcType=DECIMAL},
+            COMMISSION = #{commission,jdbcType=DECIMAL},
+            COUPONPRICE = #{couponprice,jdbcType=DECIMAL},
+            COUPONPERCENT = #{couponpercent,jdbcType=DECIMAL},
+            COUPONVALUE = #{couponvalue,jdbcType=DECIMAL},
+            MAINIMG = #{mainimg,jdbcType=VARCHAR},
+            PLATFORM = #{platform,jdbcType=VARCHAR},
+            PLATTYPE = #{plattype,jdbcType=DECIMAL},
+            COUPONID = #{couponid,jdbcType=VARCHAR},
+            COUPONALLNUM = #{couponallnum,jdbcType=DECIMAL},
+            COUPONLEFTNUM = #{couponleftnum,jdbcType=DECIMAL},
+            COUPONDETAIL = #{coupondetail,jdbcType=VARCHAR},
+            COUPONTAKENNUM = #{coupontakennum,jdbcType=DECIMAL},
+            STARTTIME = #{starttime,jdbcType=TIMESTAMP},
+            ENDTIME = #{endtime,jdbcType=TIMESTAMP},
+            PCLINK = #{pclink,jdbcType=VARCHAR},
+            WAPLINK = #{waplink,jdbcType=VARCHAR},
+            IOSLINK = #{ioslink,jdbcType=VARCHAR},
+            ANDLINK = #{andlink,jdbcType=VARCHAR},
+            ADDTIME = #{addtime,jdbcType=TIMESTAMP},
+            ISON = #{ison,jdbcType=DECIMAL},
+            CAT_NAME = #{catName,jdbcType=VARCHAR},
+            PRODUCTDETAILPAGE = #{productdetailpage,jdbcType=VARCHAR},
+            TBKLINK = #{tbklink,jdbcType=VARCHAR},
+            INCOMEPERCENT = #{incomepercent,jdbcType=DECIMAL},
+            NICK = #{nick,jdbcType=VARCHAR},
+            SELLERID = #{sellerid,jdbcType=DECIMAL},
+            STORENAME = #{storename,jdbcType=VARCHAR},
+            ISDELETE = #{isdelete,jdbcType=DECIMAL},
+            UPDATETIME = #{updatetime,jdbcType=TIMESTAMP},
+            ISINDEX = #{isindex,jdbcType=DECIMAL},
+            SORT = #{sort,jdbcType=DECIMAL},
+            INDEXENDTIME = #{indexendtime,jdbcType=TIMESTAMP},
+            ISFIRSTPAGE = #{isfirstpage,jdbcType=DECIMAL},
+            FIRSTPAGESORT = #{firstpagesort,jdbcType=DECIMAL},
+            FIRSTPAGEENDTIME = #{firstpageendtime,jdbcType=TIMESTAMP}
+        where ID = #{id,jdbcType=DECIMAL}
+    </update>
+</mapper>

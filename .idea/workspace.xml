@@ -7,63 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1fd1ec3-285e-496d-be4a-9280cf82673b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/annotations_api.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_lang.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_lang_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/dao/ZmRebatewebsiteMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/dao/ZmTbkitemMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/dao/ZmTopcouponMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/entiy/ZmRebatewebsite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/entiy/ZmTbkitem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/entiy/ZmTopcoupon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/servic/impl/ZmRebatewebsiteServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/servic/impl/ZmTbkitemServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/servic/impl/ZmTopCouponServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/servic/search/ZmRebatewebsiteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/servic/search/ZmTbkitemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/servic/search/ZmTopCouponService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/util/BeanOfMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/util/CrossDomainInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/util/InsertIndexTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/util/SearchIndexTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ZmRebatewebsiteMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ZmTbkitemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ZmTopcouponMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/JsonpAjax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/zhongDemo_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/zhongDemo_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/servic/impl/CompanyIndexservicImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/servic/impl/CompanyIndexservicImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/servic/search/CompanyIndexservic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/servic/search/CompanyIndexservic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/test/CompanyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/test/CompanyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/util/CreateIndexDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/util/CreateIndexDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/util/InitDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/util/InitDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/util/InsertIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xiaoqiang/util/InsertIndex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/zhongDemo.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xiaoqiang/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xiaoqiang/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xiaoqiang/servic/impl/CompanyIndexservicImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xiaoqiang/servic/impl/CompanyIndexservicImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xiaoqiang/test/CompanyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xiaoqiang/test/CompanyTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xiaoqiang/util/CreateIndexDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xiaoqiang/util/CreateIndexDemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xiaoqiang/util/InitDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xiaoqiang/util/InitDemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xiaoqiang/util/InsertIndex.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xiaoqiang/util/InsertIndex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/classes/META-INF/zhongDemo.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/classes/applicationContext-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/classes/applicationContext-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/classes/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/classes/com/xiaoqiang/controller/ElastisSearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/classes/com/xiaoqiang/controller/ElastisSearchController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/classes/com/xiaoqiang/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/classes/com/xiaoqiang/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/classes/com/xiaoqiang/util/ElasticsearchClientConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/classes/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/lib/jackson-core-2.5.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/WEB-INF/view/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/zhongDemo-1.0-SNAPSHOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhongDemo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -129,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+            <state relative-caret-position="76">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -798,7 +742,7 @@
       <workItem from="1566176806695" duration="2892000" />
       <workItem from="1566200926423" duration="2980000" />
       <workItem from="1566378155787" duration="665000" />
-      <workItem from="1567040913685" duration="1673000" />
+      <workItem from="1567040913685" duration="1736000" />
     </task>
     <task id="LOCAL-00001" summary="ElasticSearch7.20版本的增删改查demo,用的ES客户端是HIGH REST">
       <created>1563515867153</created>
@@ -807,7 +751,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563515867153</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ElasticSearch7.20版本的增删改查demo,用的ES客户端是HIGH REST">
+      <created>1567042644670</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567042644670</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -843,7 +794,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157069000" />
+    <option name="totallyTimeSpent" value="157132000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1370,8 +1321,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        <state relative-caret-position="76">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="22" />
         </state>
       </provider>
     </entry>
